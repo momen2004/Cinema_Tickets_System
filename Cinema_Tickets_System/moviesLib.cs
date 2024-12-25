@@ -16,6 +16,13 @@ namespace Cinema_Tickets_System
         {
             InitializeComponent();
         }
+        private void AddMovieTolist(string movieName, int imageIndex)
+        {
+            ListViewItem movie = new ListViewItem(movieName, imageIndex); //If we want the image name say string imageKey
+           
+            listViewMovies.Items.Add(movie);
+        }
+
 
         private void moviesLib_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -24,7 +31,7 @@ namespace Cinema_Tickets_System
 
         private void moviesLib_Load(object sender, EventArgs e)
         {
-
+            listBoxDays.SelectedIndex = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,19 +41,46 @@ namespace Cinema_Tickets_System
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
+            if (listBoxDays.SelectedItem != null)
             {
-                string selectedDay = listBox1.SelectedItem.ToString();
-                if (listBox1.SelectedItem != null)
+                string selectedDay = listBoxDays.SelectedItem.ToString();
+              
+                listViewMovies.Items.Clear();
+                //if (selectedDay == "Saturday")
+                //{
+                //    AddMovieTolist("Chriss the swiss", 0);
+                //    AddMovieTolist("Chucky",1);
+                //    AddMovieTolist("Mulan", 30);
+                //}
+                //else if(selectedDay == "Sunday")
+                //{
+
+                //}
+                switch (selectedDay)
                 {
-                    listView1.Visible = (selectedDay == "Sunday"); 
-                    listView2.Visible = (selectedDay == "Monday");
-                    listView3.Visible = (selectedDay == "Tuesday");
-                    listView4.Visible = (selectedDay == "Wednesday");
-                    listView5.Visible = (selectedDay == "Thursday");
-                    listView6.Visible = (selectedDay == "Saturday");
-                    if (selectedDay == "Friday")
-                        MessageBox.Show("No movies showing for the selected day");
+                    case "Saturday":
+                        AddMovieTolist("Chriss the swiss", 0);
+                        AddMovieTolist("Case of chucky", 1);
+                        break;
+                    case "Sunday":
+                        AddMovieTolist("Siccin 7", 31);
+                        AddMovieTolist("John wick", 28);
+                        break;
+                    case "Monday":
+                        AddMovieTolist("Wreek it ralph", 40);
+                        break;
+                    case "Tuesday":
+                        AddMovieTolist("Winne the pooh", 39);
+                        break;
+                    case "Wednesday":
+                        AddMovieTolist("Toy story 2", 36);
+                        break;
+                    case "Thursday":
+                        AddMovieTolist("Toy story 1", 35);
+                        break;
+                    case "Friday":
+                        MessageBox.Show("No movies available for the selected day");
+                        break;
                 }
             }
         }
@@ -84,6 +118,10 @@ namespace Cinema_Tickets_System
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
