@@ -41,11 +41,11 @@
             // 
             this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(648, 12);
+            this.titleLabel.Location = new System.Drawing.Point(577, 79);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(316, 81);
+            this.titleLabel.Size = new System.Drawing.Size(331, 85);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Movie title";
             this.titleLabel.Click += new System.EventHandler(this.label1_Click);
@@ -69,23 +69,23 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.Color.Maroon;
+            this.richTextBox1.BackColor = System.Drawing.Color.Silver;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.richTextBox1.Location = new System.Drawing.Point(577, 237);
+            this.richTextBox1.Location = new System.Drawing.Point(577, 167);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ShowSelectionMargin = true;
-            this.richTextBox1.Size = new System.Drawing.Size(830, 604);
+            this.richTextBox1.Size = new System.Drawing.Size(830, 674);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
             this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.richTextBox2.BackColor = System.Drawing.Color.Maroon;
+            this.richTextBox2.BackColor = System.Drawing.Color.Silver;
             this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
@@ -102,7 +102,7 @@
             // 
             this.posterBox.Location = new System.Drawing.Point(12, 12);
             this.posterBox.Name = "posterBox";
-            this.posterBox.Size = new System.Drawing.Size(376, 421);
+            this.posterBox.Size = new System.Drawing.Size(559, 421);
             this.posterBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.posterBox.TabIndex = 0;
             this.posterBox.TabStop = false;

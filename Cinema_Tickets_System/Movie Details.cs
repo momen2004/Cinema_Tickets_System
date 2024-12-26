@@ -17,8 +17,8 @@ namespace Cinema_Tickets_System
             InitializeComponent();
             posterBox.Image = img;
             titleLabel.Text = title;
-            richTextBox1.Text = description ;
-            richTextBox2.Text = "Showing time: " + time+'\n'+"Seats available: "+seats;
+            richTextBox1.Text = "Description: \n" + description ;
+            richTextBox2.Text = "Showing time: \n" + time+'\n'+"Seats available:\n"+seats;
             
         }
 

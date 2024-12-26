@@ -38,6 +38,7 @@
             this.emailBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkPhoneLabel = new System.Windows.Forms.Label();
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
@@ -46,20 +47,21 @@
             this.cityBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.movieTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.SaveBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.doneBtn = new System.Windows.Forms.Button();
             this.priceLabel = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.checkEmailLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +73,8 @@
             this.FnameBox.Size = new System.Drawing.Size(254, 38);
             this.FnameBox.TabIndex = 0;
             this.FnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.FnameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LnameBox_KeyPress);
+            this.FnameBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FnameBox_KeyUp);
             // 
             // titleLabel
             // 
@@ -80,7 +84,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(328, 9);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(277, 60);
+            this.titleLabel.Size = new System.Drawing.Size(267, 59);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Personal info";
             // 
@@ -115,6 +119,7 @@
             this.LnameBox.Name = "LnameBox";
             this.LnameBox.Size = new System.Drawing.Size(254, 38);
             this.LnameBox.TabIndex = 8;
+            this.LnameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LnameBox_KeyPress);
             // 
             // label3
             // 
@@ -135,9 +140,11 @@
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(254, 38);
             this.emailBox.TabIndex = 10;
+            this.emailBox.TextChanged += new System.EventHandler(this.emailBox_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkEmailLabel);
             this.groupBox1.Controls.Add(this.emailBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.FnameBox);
@@ -156,6 +163,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkPhoneLabel);
             this.groupBox2.Controls.Add(this.phoneBox);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.addressBox);
@@ -171,6 +179,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Your address";
             // 
+            // checkPhoneLabel
+            // 
+            this.checkPhoneLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.checkPhoneLabel.AutoSize = true;
+            this.checkPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkPhoneLabel.ForeColor = System.Drawing.Color.Red;
+            this.checkPhoneLabel.Location = new System.Drawing.Point(278, 176);
+            this.checkPhoneLabel.Name = "checkPhoneLabel";
+            this.checkPhoneLabel.Size = new System.Drawing.Size(0, 25);
+            this.checkPhoneLabel.TabIndex = 12;
+            // 
             // phoneBox
             // 
             this.phoneBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,6 +197,8 @@
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(254, 38);
             this.phoneBox.TabIndex = 10;
+            this.phoneBox.TextChanged += new System.EventHandler(this.phoneBox_TextChanged);
+            this.phoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneBox_KeyPress);
             // 
             // label4
             // 
@@ -198,6 +219,8 @@
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(254, 38);
             this.addressBox.TabIndex = 0;
+            this.addressBox.TextChanged += new System.EventHandler(this.addressBox_TextChanged);
+            this.addressBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addressBox_KeyPress);
             // 
             // label5
             // 
@@ -230,6 +253,7 @@
             this.cityBox.Name = "cityBox";
             this.cityBox.Size = new System.Drawing.Size(254, 38);
             this.cityBox.TabIndex = 8;
+            this.cityBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LnameBox_KeyPress);
             // 
             // groupBox3
             // 
@@ -254,6 +278,15 @@
             this.movieTitle.TabIndex = 15;
             this.movieTitle.Text = "Movie title";
             this.movieTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(65, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 219);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox4
             // 
@@ -295,25 +328,16 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // SaveBtn
+            // doneBtn
             // 
-            this.SaveBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(659, 635);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(265, 123);
-            this.SaveBtn.TabIndex = 17;
-            this.SaveBtn.Text = "Check out";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(65, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 219);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.doneBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doneBtn.Location = new System.Drawing.Point(608, 635);
+            this.doneBtn.Name = "doneBtn";
+            this.doneBtn.Size = new System.Drawing.Size(316, 123);
+            this.doneBtn.TabIndex = 17;
+            this.doneBtn.Text = "Save your ticket";
+            this.doneBtn.UseVisualStyleBackColor = true;
+            this.doneBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // priceLabel
             // 
@@ -338,19 +362,31 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Price";
             // 
-            // button1
+            // saveBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 5;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(337, 635);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 123);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveBtn.BackColor = System.Drawing.Color.White;
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.saveBtn.FlatAppearance.BorderSize = 5;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Location = new System.Drawing.Point(337, 635);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(265, 123);
+            this.saveBtn.TabIndex = 18;
+            this.saveBtn.Text = "Check info";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click_1);
+            // 
+            // checkEmailLabel
+            // 
+            this.checkEmailLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.checkEmailLabel.AutoSize = true;
+            this.checkEmailLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEmailLabel.ForeColor = System.Drawing.Color.Red;
+            this.checkEmailLabel.Location = new System.Drawing.Point(278, 176);
+            this.checkEmailLabel.Name = "checkEmailLabel";
+            this.checkEmailLabel.Size = new System.Drawing.Size(0, 25);
+            this.checkEmailLabel.TabIndex = 13;
             // 
             // reservation
             // 
@@ -358,9 +394,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(932, 773);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.doneBtn);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -380,9 +416,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -413,9 +449,11 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button doneBtn;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Label checkPhoneLabel;
+        private System.Windows.Forms.Label checkEmailLabel;
     }
 }

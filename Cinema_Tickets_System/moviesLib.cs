@@ -25,7 +25,7 @@ namespace Cinema_Tickets_System
             movie.SubItems.Add(description); 
             movie.SubItems.Add(seats.ToString()); 
             listViewMovies.Items.Add(movie);
-           
+            
         }
 
 

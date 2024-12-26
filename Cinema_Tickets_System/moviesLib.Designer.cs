@@ -40,7 +40,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -53,7 +52,8 @@
             // 
             // listBoxDays
             // 
-            this.listBoxDays.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxDays.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxDays.BackColor = System.Drawing.Color.DarkRed;
             this.listBoxDays.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxDays.ForeColor = System.Drawing.Color.White;
@@ -78,14 +78,14 @@
             this.listViewMovies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewMovies.BackColor = System.Drawing.Color.Gray;
+            this.listViewMovies.BackColor = System.Drawing.Color.Gainsboro;
             this.listViewMovies.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewMovies.HideSelection = false;
             this.listViewMovies.LargeImageList = this.imageList1;
-            this.listViewMovies.Location = new System.Drawing.Point(355, 228);
+            this.listViewMovies.Location = new System.Drawing.Point(355, 69);
             this.listViewMovies.MultiSelect = false;
             this.listViewMovies.Name = "listViewMovies";
-            this.listViewMovies.Size = new System.Drawing.Size(824, 449);
+            this.listViewMovies.Size = new System.Drawing.Size(824, 608);
             this.listViewMovies.SmallImageList = this.imageList1;
             this.listViewMovies.TabIndex = 3;
             this.listViewMovies.TileSize = new System.Drawing.Size(600, 600);
