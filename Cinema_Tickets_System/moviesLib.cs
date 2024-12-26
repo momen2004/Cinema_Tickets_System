@@ -25,6 +25,7 @@ namespace Cinema_Tickets_System
             movie.SubItems.Add(description); 
             movie.SubItems.Add(seats.ToString()); 
             listViewMovies.Items.Add(movie);
+           
         }
 
 
@@ -60,7 +61,7 @@ namespace Cinema_Tickets_System
                 //{
 
                 //}
-                switch (selectedDay)
+                switch (selectedDay) //too long we dont have a database );
                 {
                     case "Saturday":
                         AddMovieTolist("Chriss the swiss", "Chris the swiss.jpg", "9:00 pm", "Croatia, 7th of January 1992: In the middle of the war, a young journalist's body is discovered dressed in the uniform of an international mercenary group. Twenty years later, his cousin Anja Kofmel investigates his story.", 12);

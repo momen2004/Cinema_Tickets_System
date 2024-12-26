@@ -19,10 +19,12 @@ namespace Cinema_Tickets_System
             titleLabel.Text = title;
             richTextBox1.Text = description ;
             richTextBox2.Text = "Showing time: " + time+'\n'+"Seats available: "+seats;
+            
         }
 
         private void Movie_Details_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +34,8 @@ namespace Cinema_Tickets_System
 
         private void bookBtn_Click(object sender, EventArgs e)
         {
-
+            reservation res = new reservation(posterBox.Image, titleLabel.Text);
+            res.ShowDialog();
         }
     }
 }
