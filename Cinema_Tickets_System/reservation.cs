@@ -19,6 +19,8 @@ namespace Cinema_Tickets_System
             movieTitle.Text = name;
         }
 
+         int Ticket_price = 8; //s3r el ticket
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -55,7 +57,21 @@ namespace Cinema_Tickets_System
 
         private void reservation_Load(object sender, EventArgs e)
         {
-            
+            priceLabel.Text = Ticket_price.ToString() + " JOD";
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if(numericUpDown1.Value >= 1 && numericUpDown1.Value <=5)
+            {
+                Ticket_price = Convert.ToInt32( numericUpDown1.Value) * 8;
+                priceLabel.Text = Ticket_price.ToString() + " JOD";
+            }
+        }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reservation));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FnameBox = new System.Windows.Forms.TextBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LnameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.phoneBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.movieTitle = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -63,14 +63,14 @@
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // FnameBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(18, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 38);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.FnameBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FnameBox.Location = new System.Drawing.Point(18, 77);
+            this.FnameBox.Name = "FnameBox";
+            this.FnameBox.Size = new System.Drawing.Size(254, 38);
+            this.FnameBox.TabIndex = 0;
+            this.FnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // titleLabel
             // 
@@ -108,13 +108,13 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Last name";
             // 
-            // textBox2
+            // LnameBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(319, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 38);
-            this.textBox2.TabIndex = 8;
+            this.LnameBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnameBox.Location = new System.Drawing.Point(319, 77);
+            this.LnameBox.Name = "LnameBox";
+            this.LnameBox.Size = new System.Drawing.Size(254, 38);
+            this.LnameBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -128,22 +128,22 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Email address";
             // 
-            // textBox3
+            // emailBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(18, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 38);
-            this.textBox3.TabIndex = 10;
+            this.emailBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.Location = new System.Drawing.Point(18, 168);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(254, 38);
+            this.emailBox.TabIndex = 10;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.emailBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.FnameBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.LnameBox);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(337, 108);
@@ -156,12 +156,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.phoneBox);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.addressBox);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.cityBox);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(337, 366);
@@ -171,13 +171,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Your address";
             // 
-            // textBox4
+            // phoneBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(18, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 38);
-            this.textBox4.TabIndex = 10;
+            this.phoneBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneBox.Location = new System.Drawing.Point(18, 168);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(254, 38);
+            this.phoneBox.TabIndex = 10;
             // 
             // label4
             // 
@@ -191,13 +191,13 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Phone number";
             // 
-            // textBox5
+            // addressBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(18, 77);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 38);
-            this.textBox5.TabIndex = 0;
+            this.addressBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.Location = new System.Drawing.Point(18, 77);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(254, 38);
+            this.addressBox.TabIndex = 0;
             // 
             // label5
             // 
@@ -223,13 +223,13 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "City";
             // 
-            // textBox6
+            // cityBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(319, 77);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(254, 38);
-            this.textBox6.TabIndex = 8;
+            this.cityBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityBox.Location = new System.Drawing.Point(319, 77);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(254, 38);
+            this.cityBox.TabIndex = 8;
             // 
             // groupBox3
             // 
@@ -293,15 +293,16 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // SaveBtn
             // 
             this.SaveBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(337, 635);
+            this.SaveBtn.Location = new System.Drawing.Point(659, 635);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(265, 123);
             this.SaveBtn.TabIndex = 17;
-            this.SaveBtn.Text = "Save";
+            this.SaveBtn.Text = "Check out";
             this.SaveBtn.UseVisualStyleBackColor = true;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -322,6 +323,7 @@
             this.priceLabel.Size = new System.Drawing.Size(64, 31);
             this.priceLabel.TabIndex = 18;
             this.priceLabel.Text = "Price";
+            this.priceLabel.Click += new System.EventHandler(this.priceLabel_Click);
             // 
             // groupBox5
             // 
@@ -343,11 +345,11 @@
             this.button1.FlatAppearance.BorderSize = 5;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(659, 635);
+            this.button1.Location = new System.Drawing.Point(337, 635);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(265, 123);
             this.button1.TabIndex = 18;
-            this.button1.Text = "Check out";
+            this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // reservation
@@ -390,21 +392,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FnameBox;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox LnameBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox phoneBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox cityBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label movieTitle;
